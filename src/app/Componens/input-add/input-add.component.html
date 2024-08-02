@@ -1,0 +1,17 @@
+<div
+  class="card flex justify-content-center align-items-center container flex-row border-0"
+>
+  <input
+    type="text"
+    class="w-75 me-3"
+    pInputText
+    [(ngModel)]="value"
+    #newValue
+  />
+  <p-button
+    label="Add"
+    [text]="true"
+    [raised]="true"
+    (click)="AddValueChanged(newValue.value)"
+  />
+</div>

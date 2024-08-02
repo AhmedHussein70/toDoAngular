@@ -1,0 +1,30 @@
+<div class="card">
+  <p-table
+    [value]="products"
+    [tableStyle]="{ 'min-width': '30rem' }"
+    class="m-auto"
+  >
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Code</th>
+        <th>Name</th>
+
+        <th>Controls</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-product>
+      <tr>
+        <td>{{ product.id }}</td>
+        <td>{{ product.title }}</td>
+
+        <td>
+          <p-button
+            label="Delete"
+            severity="danger"
+            (click)="selectId(product.id)"
+          />
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
